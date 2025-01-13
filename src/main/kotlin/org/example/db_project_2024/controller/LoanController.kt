@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController
 
 @RestController
 @RequestMapping("/v1/loans")
-class LoneController (
+class LoanController (
 
 ) {
     @GetMapping("")
