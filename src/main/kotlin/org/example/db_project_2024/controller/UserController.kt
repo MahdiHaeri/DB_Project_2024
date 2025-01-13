@@ -15,4 +15,23 @@ class UserController (
     fun getUserDetails(): String {
         return userService.getUserDetails()
     }
+
+    @GetMapping("")
+    fun getUsers(): String {
+        // TODO: Implement
+        return "hello"
+    }
+
+    @GetMapping("/{id}")
+    fun getUser(): String {
+        // TODO: Implement
+        return "hello"
+    }
+
+
+    @GetMapping("/{id}")
+    fun updateUser(): String {
+        // TODO: Implement
+        return "hello";
+    }
 }
