@@ -1,4 +1,7 @@
 spring:
+  sql:
+    init:
+      mode: always
   application:
     name: DB_Project_2024
   profiles:
