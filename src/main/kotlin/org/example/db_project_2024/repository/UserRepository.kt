@@ -1,3 +1,5 @@
+package org.example.db_project_2024.repository
+
 import org.example.db_project_2024.model.User
 import org.springframework.jdbc.core.JdbcTemplate
 import org.springframework.stereotype.Repository
