@@ -19,19 +19,19 @@ class UserController (
     @GetMapping("")
     fun getUsers(): String {
         // TODO: Implement
-        return "hello"
+        return "getUsers"
     }
 
     @GetMapping("/{id}")
     fun getUser(): String {
         // TODO: Implement
-        return "hello"
+        return "getUser"
     }
 
 
     @GetMapping("/{id}")
     fun updateUser(): String {
         // TODO: Implement
-        return "hello";
+        return "updateUser"
     }
 }

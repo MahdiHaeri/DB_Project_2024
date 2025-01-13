@@ -13,13 +13,13 @@ class TransactionController (
     @GetMapping("")
     fun getTransactions(): String {
         // TODO: Implement
-        return "Hello"
+        return "getTransaction"
     }
 
     @GetMapping("/{id}")
     fun getTransaction(): String {
         // TODO: Implement
-        return "Hello"
+        return "getTransaction"
     }
 
     @PostMapping("")

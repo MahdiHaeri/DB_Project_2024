@@ -6,24 +6,19 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-@RequestMapping("/v1/loans")
-class LoneController (
+@RequestMapping("/v1/accounts")
+class AccountController (
 
 ) {
     @GetMapping("")
-    fun getLoans(): String {
+    fun getAccounts(): String {
         // TODO: Implement
-        return "getLoans"
+        return "getAccounts"
     }
 
     @GetMapping("/{id}")
-    fun getLoan(): String {
+    fun getAccount(): String {
         // TODO: Implement
-        return "getLoan"
-    }
-
-    @PostMapping("")
-    fun createLoan() {
-        // TODO: Implement
+        return "getAccount"
     }
 }
