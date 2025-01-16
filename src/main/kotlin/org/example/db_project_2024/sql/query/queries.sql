@@ -1,16 +1,3 @@
--- قسمت سوم: کوئری‌های SQL
-
--- 1. اضافه کردن فرد جدید به جدول Persons
-INSERT INTO Persons (PersonID, FullName, DateOfBirth, PhoneNumber, Email, Address)
-VALUES (10, 'Ali Rezaei', '1990-05-15', '09123456789', 'ali.rezaei@gmail.com', 'Tehran, Iran');
-
-INSERT INTO Customers (CustomerID, CustomerType, PersonID)
-VALUES (10, 'Individual', 10);
-
--- 2. ایجاد حساب جدید برای فرد موجود در جدول Accounts
-INSERT INTO Accounts (AccountID, CustomerID, AccountNumber, AccountType, Balance, Status, OpenDate)
-VALUES (10, 10, '1234567890', 'Savings', 1000000.00, 'Active', CURDATE());
-
 -- 3. نمایش تمام تراکنش‌های مرتبط با یک حساب خاص
 SELECT *
 FROM Transactions
