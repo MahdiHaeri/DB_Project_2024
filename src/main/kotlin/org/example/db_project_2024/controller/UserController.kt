@@ -1,9 +1,11 @@
 package org.example.db_project_2024.controller
 
+import org.example.db_project_2024.controller.response.EmptyResponse
 import org.example.db_project_2024.controller.response.ResponseWrapper
 import org.example.db_project_2024.enums.ResponseStatusEnum
 import org.example.db_project_2024.model.User
 import org.example.db_project_2024.service.UserService
+import org.springframework.web.bind.annotation.DeleteMapping
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.PutMapping
@@ -25,9 +27,11 @@ class UserController (
     }
 
     @GetMapping("/{id}")
-    fun getUser(@PathVariable id: String): String {
-        // TODO: Implement
-        return "hello"
+    fun getUser(@PathVariable id: String): ResponseWrapper<User?> {
+        return ResponseWrapper(
+            ResponseStatusEnum.OK,
+            userService.getUserById(id.toLong())
+        )
     }
 
 
@@ -35,5 +39,11 @@ class UserController (
     fun updateUser(@PathVariable id: String): String {
         // TODO: Implement
         return "updateUser"
+    }
+
+    @DeleteMapping("/{id}")
+    fun deleteUser(@PathVariable id: String): EmptyResponse {
+        userService.deleteUser(id.toLong())
+        return EmptyResponse(ResponseStatusEnum.OK)
     }
 }
