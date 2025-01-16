@@ -1,4 +1,4 @@
-CREATE TABLE users
+CREATE TABLE IF NOT EXISTS users
 (
     id           SERIAL PRIMARY KEY,
     username     VARCHAR(255) NOT NULL,
@@ -13,7 +13,7 @@ CREATE TABLE users
     updated_at   TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE TABLE transactions
+CREATE TABLE IF NOT EXISTS transactions
 (
     id          SERIAL PRIMARY KEY,
     sender_id   INT            NOT NULL, -- foreign key
@@ -28,7 +28,7 @@ CREATE TABLE transactions
     CONSTRAINT fk_sender_id FOREIGN KEY (sender_id) REFERENCES users (id)
 );
 
-CREATE TABLE employees
+CREATE TABLE IF NOT EXISTS employees
 (
     id          SERIAL PRIMARY KEY,
     user_id     INT          NOT NULL, -- foreign key
@@ -39,7 +39,7 @@ CREATE TABLE employees
     CONSTRAINT fk_user_id FOREIGN KEY (user_id) REFERENCES users (id)
 );
 
-CREATE TABLE customers
+CREATE TABLE IF NOT EXISTS customers
 (
     id          SERIAL PRIMARY KEY,
     user_id     INT          NOT NULL, -- foreign key
@@ -50,7 +50,7 @@ CREATE TABLE customers
     CONSTRAINT fk_user_id FOREIGN KEY (user_id) REFERENCES users (id)
 );
 
-CREATE TABLE loans
+CREATE TABLE IF NOT EXISTS loans
 (
     id             SERIAL PRIMARY KEY,
     customer_id    INT            NOT NULL, -- foreign key
@@ -65,7 +65,7 @@ CREATE TABLE loans
     CONSTRAINT fk_customer_id FOREIGN KEY (customer_id) REFERENCES customers (id)
 );
 
-CREATE TABLE installments
+CREATE TABLE IF NOT EXISTS installments
 (
     id            SERIAL PRIMARY KEY,
     loan_id       INT            NOT NULL, -- foreign key
@@ -79,7 +79,7 @@ CREATE TABLE installments
     CONSTRAINT fk_loan_id FOREIGN KEY (loan_id) REFERENCES loans (id)
 );
 
-CREATE TABLE accounts
+CREATE TABLE IF NOT EXISTS accounts
 (
     id            SERIAL PRIMARY KEY,
     loan_id       INT            NOT NULL, -- foreign key
