@@ -113,9 +113,14 @@ SECURITY_USER_PASSWORD=123123123
 
 ---
 
+## Schema 
+
+![image](https://github.com/user-attachments/assets/b96b0db4-aea5-4877-8427-eefd97a73348)
+
+
 ## ER Diagram
 
-Add an image or link to your ER diagram here.
+![image](https://github.com/user-attachments/assets/6c170caa-40b1-4ff6-92eb-79b0e6068005)
 
 ---
 
